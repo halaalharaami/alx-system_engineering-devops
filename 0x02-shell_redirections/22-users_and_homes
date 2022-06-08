@@ -1,0 +1,6 @@
+#!/bin/bash
+cut -d";" --fields=1,6 /etc/passwd |
+100. find . -empty -printf "%f\n"
+101. find . -type f -name "*.gif" -printf "%f\n" | rev | cut -d '.' -f2- | rev | LC_ALL=C sort -f
+102. echo -ne $(cut -c-1 | tr -d '\n')'\n'
+103. tail -n +2 | cut -f1 | sort | uniq -c | sort -nr -k 1,1 | cut -c 9- | head -11
